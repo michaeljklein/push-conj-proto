@@ -23,3 +23,8 @@ partAnd :: ExprF (AndF a) -> ExprF (ExprF (AndF a))
 
 to partition the outer expression on the `And`-filled leaves.
 
+
+# Docs
+
+Haddock generated documentation may be found [here](https://michaeljklein.github.io/push-conj-proto/)
+
