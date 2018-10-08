@@ -37,10 +37,13 @@ set of leaves of `T`: `leaves(S) <= leaves(T)`
 
 ### Example 1
 
-The leafy subtrees of a non-empty list are just 
+The leafy subtrees of a `NonEmpty` list are just:
 
 ```haskell
-(init . tails) :: NonEmpty a -> [[a]]
+mapMaybe nonEmpty . toList . tails :: NonEmpty a -> [NonEmpty a]
+
+λ> (mapMaybe nonEmpty . toList . tails) [1..3]
+[1 :| [2,3],2 :| [3],3 :| []]
 ```
 
 
